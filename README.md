@@ -7,11 +7,11 @@ Home: https://pypi.org/project/gridtk/
 
 Package license: GPL-3.0-or-later
 
-Summary: SGE Grid-enabled job submitter and execution monitor
+Summary: GridTK: Slurm Job Management for Humans
 
-Development: https://gitlab.idiap.ch/software/gridtk
+Development: https://github.com/idiap/gridtk
 
-Documentation: https://gridtk.readthedocs.io
+Documentation: https://gridtk.readthedocs.io/
 
 Current build status
 ====================
@@ -147,5 +147,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@183amir](https://github.com/183amir/)
 * [@anjos](https://github.com/anjos/)
 
