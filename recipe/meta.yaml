@@ -1,5 +1,5 @@
 {% set name = "gridtk" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gridtk-{{ version }}.tar.gz
-  sha256: 4055e2550be3ff87ebca8eeeee0d3b5b9a535a0259bdb506b7633985907d5236
+  sha256: 885ec71c976e8d7cd3270ae0afe87874348c2544c002e19f82a47031868efab7
 
 build:
   entry_points:
     - gridtk = gridtk.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
