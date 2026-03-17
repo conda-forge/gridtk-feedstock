@@ -1,5 +1,5 @@
 {% set name = "gridtk" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gridtk-{{ version }}.tar.gz
-  sha256: 885ec71c976e8d7cd3270ae0afe87874348c2544c002e19f82a47031868efab7
+  sha256: 7fd63eba606437ec1ace5ed2f7b714891b10db664c0a51a9d86bc0921770e010
 
 build:
   entry_points:
