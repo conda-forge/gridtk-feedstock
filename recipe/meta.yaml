@@ -1,5 +1,5 @@
 {% set name = "gridtk" %}
-{% set version = "3.2.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/gridtk-{{ version }}.tar.gz
-  sha256: 49a7c7696031ab0b6255d0a4fb6b3d25ff4ac018df73e2a5b6ae44d7e6fd8ff3
+  sha256: ea08768b441e8fd1e2357adbf82f434de07fc2b7e6b6a6bc9ef708c4d180ca5d
 
 build:
   entry_points:
