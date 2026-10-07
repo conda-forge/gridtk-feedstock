@@ -195,6 +195,3 @@ Feedstock Maintainers
 * [@183amir](https://github.com/183amir/)
 * [@anjos](https://github.com/anjos/)
 
-
-<!-- dummy commit to enable rerendering -->
-

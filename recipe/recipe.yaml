@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: gridtk
+  version: "4.0.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/gridtk-${{ version }}.tar.gz
+  sha256: ea08768b441e8fd1e2357adbf82f434de07fc2b7e6b6a6bc9ef708c4d180ca5d
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - gridtk = gridtk.cli:cli
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - versioningit
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - sqlalchemy >=2.0,<3.dev0
+    - tabulate >=0.9.0,<0.10.dev0
+    - click >=8.1,<9.dev0
+
+tests:
+  - python:
+      imports:
+        - gridtk
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - gridtk --help
+
+about:
+  summary: "GridTK: Slurm Job Management for Humans"
+  license: GPL-3.0-or-later
+  license_file: COPYING
+  homepage: https://pypi.org/project/gridtk/
+  repository: https://github.com/idiap/gridtk
+  documentation: https://gridtk.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - anjos
+    - 183amir
