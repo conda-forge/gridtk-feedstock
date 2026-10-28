@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gridtk
-  version: "4.0.0"
+  version: "4.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/gridtk-${{ version }}.tar.gz
-  sha256: ea08768b441e8fd1e2357adbf82f434de07fc2b7e6b6a6bc9ef708c4d180ca5d
+  sha256: c05f58a7e2c79b53ad8b00a10f4935043546bdb291569c87f95099ee19f6d5ee
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
